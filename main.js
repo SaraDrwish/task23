@@ -1,32 +1,39 @@
+ function btn(){
 
+var num1 = parseFloat(document.getElementById("num1").value);
+var num2 = parseFloat(document.getElementById("num2").value);
+// var res = document.getElementById("res").value;
+var oporation = document.getElementById("oporation").value;
 
-var num1 = document.getElementById("num1").value;
-var num2 = document.getElementById("num2").value;
-var res = document.getElementById("res").value;
-var btn = document.getElementById("btn");
+// var btn = document.getElementById("btn");
 
-document.getElementById("btn").onclick = function(){
+// document.getElementById("btn").onclick = function{
 
+if (oporation === '') {
 
-if (document.getElementById("oporation").value== "-") {
+    // alert(Math.round(num1 - num2));
+    // document.getElementById("num1").type="number";
+    // document.getElementById("num2").type="number";
 
-    alert(Math.round(num1 - num2));
+   document.getElementById('res').value = num1-num2;
 
+    // window.alert(num1 - num2);  
     //   document.getElementById("res")= num1-num2;
 
-}if (document.getElementById("oporation").value=="/") {
+}if (oporation ==='/') {
 
-       document.getElementById("res").innerHTML= num1 / num2;
-
-    // alert(num1/num2);
-
+    // document.getElementById("res").innerHTML= num1 / num2;
+    // document.getElementById("res")= num1 / num2;
+    // alert(num1 / num2);
+   document.getElementById("res").value= num1 /num2;
   
-} if (document.getElementById("oporation").value== "*") {
-    res.innerHTML= num1 * num2 ;
+} if (oporation === '*') {
+    // res.innerHTML= num1 * num2 ;
+    // alert(num1 * num2);
+     document.getElementById("res").value= num1 * num2;
 
-}else{   //    (document.getElementById("oporation").value == " \" + \" ")
-    res.innerHTML= num1 + num2 ;
+}else if  (oporation === '+'){   //    (document.getElementById("oporation").value == " \" + \" ")
+     document.getElementById("res").value= num1+num2;
 
 }
-
 }
